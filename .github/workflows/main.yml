@@ -31,7 +31,7 @@ jobs:
       - name: Copy data files
         run: |
           cp datadata.csv data/
-          cp data/Sverrir.xlsx data/
+          cp Sverrir.xlsx data/
 
       - name: Install nbconvert
         run: pip install nbconvert
