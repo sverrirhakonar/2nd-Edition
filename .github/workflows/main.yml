@@ -23,10 +23,13 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create data directory
+        run: mkdir data
+
       - name: Copy data files
         run: |
-          cp "Sverrir.xlsx" data/
           cp datadata.csv data/
+          cp Sverrir.xlsx data/
 
       - name: Run Jupyter Notebook
         run: |
