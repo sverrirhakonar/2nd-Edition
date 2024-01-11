@@ -33,6 +33,9 @@ jobs:
           cp datadata.csv data/
           cp Sverrir.xlsx data/
 
+      - name: Install nbconvert
+        run: pip install nbconvert
+
       - name: Run Jupyter Notebook
         run: |
           python -m nbconvert --execute "Reiknivél (2nd Edition).ipynb"  # Replace with the actual notebook name
