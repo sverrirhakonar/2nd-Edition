@@ -30,7 +30,7 @@ jobs:
 
       - name: Copy data files
         run: |
-          cp data/data.csv data/
+          cp datadata.csv data/
           cp data/Sverrir.xlsx data/
 
       - name: Install nbconvert
