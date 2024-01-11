@@ -20,11 +20,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt  # Replace with the actual requirements installation command
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Copy data files
         run: |
-          cp "Sverrir.xlsx" data/
+          cp "02 Mánaðarleg brotföll febrúar.xlsx" data/
           cp datadata.csv data/
 
       - name: Run Jupyter Notebook
