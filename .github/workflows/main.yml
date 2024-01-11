@@ -1,0 +1,32 @@
+name: Run Jupyter Notebook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Replace with the actual requirements installation command
+
+      - name: Copy data files
+        run: |
+          cp "Sverrir.xlsx" data/
+          cp datadata.csv data/
+
+      - name: Run Jupyter Notebook
+        run: |
+          jupyter nbconvert --execute "Reiknivél (2nd Edition).ipynb"  # Replace with the actual notebook name
