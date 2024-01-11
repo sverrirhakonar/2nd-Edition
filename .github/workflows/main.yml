@@ -38,4 +38,4 @@ jobs:
 
       - name: Run Jupyter Notebook and convert to HTML
         run: |
-          python -m nbconvert --to html --execute "Reiknivél (2nd Edition).ipynb" --ExecutePreprocessor.kernel_name=Python 3 (ipykernel)
+          python -m nbconvert --to html --execute "Reiknivél (2nd Edition).ipynb" --ExecutePreprocessor.kernel_name='Python 3 (ipykernel)'
