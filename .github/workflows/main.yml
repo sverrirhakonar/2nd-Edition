@@ -25,7 +25,7 @@ jobs:
 
       - name: Copy data files
         run: |
-          cp "02 Mánaðarleg brotföll febrúar.xlsx" data/
+          cp "Sverrir.xlsx" data/
           cp datadata.csv data/
 
       - name: Run Jupyter Notebook
