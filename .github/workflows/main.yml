@@ -36,6 +36,6 @@ jobs:
       - name: Install nbconvert
         run: pip install nbconvert
 
-      - name: Run Jupyter Notebook
+      - name: Run Jupyter Notebook and convert to HTML
         run: |
-          python -m nbconvert --execute "Reiknivél (2nd Edition).ipynb"  # Replace with the actual notebook name
+          python -m nbconvert --to html --execute "Reiknivél (2nd Edition).ipynb"  # Replace with the actual notebook name
