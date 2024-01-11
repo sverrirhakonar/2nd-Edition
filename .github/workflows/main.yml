@@ -30,12 +30,12 @@ jobs:
 
       - name: Copy data files
         run: |
-          cp datadata.csv data/
-          cp Sverrir.xlsx data/
+          cp data/data.csv data/
+          cp data/Sverrir.xlsx data/
 
       - name: Install nbconvert
         run: pip install nbconvert
 
       - name: Run Jupyter Notebook and convert to HTML
         run: |
-          python -m nbconvert --to html --execute "Reiknivél (2nd Edition).ipynb" --ExecutePreprocessor.kernel_name=python3  # Replace with the actual notebook name
+          python -m nbconvert --to html --execute "Reiknivél (2nd Edition).ipynb"
